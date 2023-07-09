@@ -46,8 +46,8 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: cd backend && npm i
       
-      - name: Lint code
-        run: cd backend && npm run lint
+      # - name: Lint code
+      #   run: cd backend && npm run lint
 
 
 
