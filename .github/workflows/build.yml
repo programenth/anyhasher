@@ -1,13 +1,10 @@
-name: Github
+name: CI
 on: [push]
 jobs:
   Explore:
    runs-on: ubuntu-latest
    steps:
-    - run: echo "job triggers"
-    - name: Check out repository code
-      uses: actions/checkout@v3 
-    - name: List files in repo
-      run: |
-       ls ${{github.workspace}}
-    - run: echo "This is job status ${{job.status}}"
+    - run: cd backend
+    - run: npm i
+    - run: npm run build
+   
